@@ -1,6 +1,10 @@
 const buildType = process.env.BUILD_TYPE;
 
 module.exports = {
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
   title: "Docusaurus Search",
   tagline:
     "An offline/local search example using @easyops-cn/docusaurus-search-local",
@@ -8,8 +12,8 @@ module.exports = {
   baseUrl: buildType === "preview" ? "/" : "/docusaurus-search-local/",
   onBrokenLinks: "throw",
   favicon: "img/favicon.ico",
-  organizationName: "easyops-cn", // Usually your GitHub org/user name.
-  projectName: "docusaurus-search-local", // Usually your repo name.
+  organizationName: "omargalal97", // Usually your GitHub org/user name.
+  projectName: "build", // Usually your repo name.
   themeConfig: {
     navbar: {
       title: "Docusaurus Search",
@@ -19,14 +23,15 @@ module.exports = {
       },
       items: [
         {
-          to: "docs/",
+          to: '/docs/intro',
           activeBasePath: "docs",
-          label: "Docs",
+          label: 'docs',
           position: "left",
         },
         { to: "blog", label: "Blog", position: "left" },
+
         {
-          href: "https://github.com/easyops-cn/docusaurus-search-local",
+          href: "https://github.com/omargalal97/build",
           label: "GitHub",
           position: "right",
         },
@@ -82,7 +87,7 @@ module.exports = {
             },
             {
               label: "GitHub",
-              href: "https://github.com/easyops-cn/docusaurus-search-local",
+              href: "https://github.com/omargalal97/build",
             },
           ],
         },
@@ -96,15 +101,11 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          editUrl:
-            "https://github.com/easyops-cn/docusaurus-search-local/edit/master/website/",
+          editUrl: "https://github.com/omargalal97/build",
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            "https://github.com/easyops-cn/docusaurus-search-local/edit/master/website/",
+          editUrl: "https://github.com/omargalal97/build",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -117,6 +118,10 @@ module.exports = {
       "@easyops-cn/docusaurus-search-local",
       /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
       ({
+        hashed: true,
+        indexDocs: true,
+        indexPages: true,
+        language: 'en', // or any other language you are using
         hashed: true,
       }),
     ],
