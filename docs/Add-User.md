@@ -1,4 +1,4 @@
-This document provides instructions on how to add, delete, and upgrade users in the system. Follow these steps to manage user accounts effectively.
+This document provides instructions on how to add users in the system. Follow these steps to manage user accounts effectively.
 
 ---
 
