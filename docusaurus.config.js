@@ -9,7 +9,7 @@ module.exports = {
   tagline:
     "An offline/local search example using @easyops-cn/docusaurus-search-local",
   url: "https://easyops-cn.github.io",
-  baseUrl: buildType === "preview" ? "/" : "/docusaurus-search-local/",
+  baseUrl: "/",
   onBrokenLinks: 'warn',
   favicon: "img/favicon.ico",
   organizationName: "omargalal97", // Usually your GitHub org/user name.
